@@ -1,0 +1,17 @@
+$max: 500;
+$offset: 5;
+$unit: "px";
+@mixin list-loop($className, $styleName) {
+    $i: 0;
+    @while $i <= $max {
+        #{$className + $i} {
+            #{$styleName}: #{$i + $unit};
+        }
+        $i: $i + $offset;
+    }
+}
+@include list-loop(".m-", "margin");
+@include list-loop(".ml-", "margin-left");
+@include list-loop(".mr-", "margin-right");
+@include list-loop(".mt-", "margin-top");
+@include list-loop(".mb-", "margin-bottom");

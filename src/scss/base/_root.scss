@@ -1,0 +1,27 @@
+@import "../abstracts";
+
+:root {
+    --section-spacing: 3.5rem;
+    @include mq(medium) {
+        --section-spacing: 7rem;
+    }
+    @each $color, $shade in $colors {
+        @each $prop, $value in $shade {
+            --#{$color}-#{$prop}: #{$value};
+        }
+    }
+
+    @each $screen-size, $property in $type-scale {
+        @if $screen-size == small {
+            @each $prop, $value in $property {
+                --font-sizs-#{$prop}: #{$value};
+            }
+        } @else {
+            @include mq(small) {
+                @each $prop, $value in $property {
+                    --font-size-#{$prop}: #{$value};
+                }
+            }
+        }
+    }
+}

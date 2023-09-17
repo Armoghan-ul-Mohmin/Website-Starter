@@ -1,0 +1,80 @@
+@import "../abstracts";
+
+@each $color, $shade in $colors {
+    @each $prop, $value in $shade {
+        .text-#{$color}-#{$prop} {
+            color: var(--#{$color}-#{$prop});
+        }
+
+        .bg-#{$color}-#{$prop} {
+            background-color: var(--#{$color}-#{$prop});
+        }
+    }
+}
+
+.primary {
+    color: var(--primary-400);
+}
+.secoundry {
+    color: var(--secoundry-400);
+}
+.red {
+    color: var(--red-400);
+}
+.pink {
+    color: var(--pink-400);
+}
+.sky {
+    color: var(--sky-400);
+}
+.grey {
+    color: var(--grey-400);
+}
+
+.teal {
+    color: var(--teal-400);
+}
+
+.orange {
+    color: var(--orange-400);
+}
+
+.voilet {
+    color: var(--voilet-400);
+}
+
+.gold {
+    color: var(--gold-400);
+}
+
+.olive {
+    color: var(--olive-400);
+}
+
+.coral {
+    color: var(--coral-400);
+}
+
+.lavender {
+    color: var(--lavender-400);
+}
+
+.mint {
+    color: var(--mint-400);
+}
+
+.plum {
+    color: var(--plum-400);
+}
+
+.cyan {
+    color: var(--cyan-400);
+}
+
+.light {
+    color: var(--light-400);
+}
+
+.dark {
+    color: var(--dark-400);
+}

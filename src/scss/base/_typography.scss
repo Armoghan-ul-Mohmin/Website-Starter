@@ -1,0 +1,71 @@
+h1,
+h2,
+h3,
+h4 {
+    --font-weight: 700;
+    --font-width: 80;
+    font-weight: normal;
+    font-stretch: 100%;
+    line-height: 1.1;
+    // color: var(--grey-800) !important;
+}
+
+h1 {
+    --font-weight: 900;
+}
+
+.title {
+    font-size: clamp(var(--font-size-600), calc(1rem + 5vw), 5rem);
+}
+
+.article-snippet-title {
+    --font-weight: 600;
+}
+
+// This is setting the font-sizes
+// based on the ones in the abstract
+// folder, go there to make updates
+
+.h1 {
+    font-size: var(--font-size-800);
+}
+
+.h2 {
+    --flow-spacer: 1.5em;
+    font-size: var(--font-size-700);
+}
+.h3 {
+    --flow-spacer: 1.5em;
+    font-size: var(--font-size-600);
+}
+
+.h4 {
+    font-size: var(--font-size-500);
+}
+
+.h5 {
+    font-size: var(--font-size-400);
+}
+
+.h6 {
+    font-size: var(--font-size-300);
+}
+small,
+.text-small {
+    font-size: var(--font-size-300);
+}
+
+strong {
+    --font-weight: 500;
+    font-weight: normal;
+}
+
+a {
+    color: var(var(--grey-100));
+
+    &:hover,
+    &:focus {
+        color: var(--grey-500);
+        text-decoration: none;
+    }
+}
